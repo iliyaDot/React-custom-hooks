@@ -11,7 +11,7 @@ export default function useFormFields(init) {
         })
     }
 
-    useDebugValue(fileds, fileds => `${Object.keys(fileds).length} fileds`)
+   
 
     return { fileds, handleChange }
 }
