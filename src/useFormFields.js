@@ -1,17 +1,17 @@
 import React, { useState, useDebugValue } from 'react'
 
 export default function useFormFields(init) {
-    const [fileds, setFileds] = useState(init)
+    const [fields, setFileds] = useState(init)
 
     function handleChange(e) {
         const { target } = e;
         setFileds({
-            ...fileds,
+            ...fields,
             [target.name]: target.value
         })
     }
 
    
-
-    return { fileds, handleChange }
+useDebugValue(`${Object.keys(fields).length }fields`)
+    return { fields, handleChange }
 }
